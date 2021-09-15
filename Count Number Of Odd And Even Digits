@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a,countP=0,countN=0;
+        int b=String.valueOf(n).length();
+        int Array[]=new int[10];
+        for(int i=0;i<b;i++){
+            a=n%10;
+            Array[i]=a;
+            n=n/10;
+        }
+        for(int i=0;i<b;i++){
+            if(Array[i]%2==0){
+                countP++;
+            }
+            else{
+                countN++;
+            }
+        }
+        System.out.println("ODD "+countN);
+        System.out.println("EVEN "+countP);
+
+    }
+}
