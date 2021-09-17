@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int rem=0,rev=0,count=0;
+	    //input will be reversed by below code
+	    while(n>0){
+	        rem=n%10;
+	        rev=rev*10+rem;
+	        n/=10;
+	    }
+	    //the reversed input wil be checked it is prime or not
+	    for(int i=2;i<rev;i++){
+	        if(rev%i==0){
+	            count++;
+	            
+	        }
+	        }
+	        if(count==0)
+	            System.out.println("Twisted Prime Number");
+	       else
+	            System.out.println("Not Twisted Prime Number");
+	}
+}
