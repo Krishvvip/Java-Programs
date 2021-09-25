@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int len=String.valueOf(n).length();
+		int copy=n;
+		int mul=1,incre=0,add=0,rem,rev;
+		while(copy>0){
+		     rem=copy%10;
+		     rev=rem;
+		     while(incre<len){
+		         mul=mul*rev;
+		         incre++;
+		     }
+		     incre=0;
+		     add=add+mul;
+		     mul=1;
+		     copy=copy/10;
+		     
+		}
+		if(add==n){
+            System.out.print(add+" It is a Armstrong Number");
+        }else{
+            System.out.print(add+" It is not a Armstrong Number");
+        }
+		
+	}
+}
