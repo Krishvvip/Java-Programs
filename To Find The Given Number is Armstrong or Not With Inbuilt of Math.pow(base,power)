@@ -1,0 +1,24 @@
+import java.lang.Math;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int copy=n;
+        int len=String.valueOf(n).length();
+        int rem,rev=0;
+        while(copy>0){
+            rem=copy%10;
+            rev=rev+ (int) Math.pow(rem,len);
+            copy=copy/10;
+        }
+        if(rev==n){
+            System.out.print(rev+" It is a Armstrong Number");
+        }else{
+            System.out.print(rev+" It is not a Armstrong Number");
+        }
+    }
+}
