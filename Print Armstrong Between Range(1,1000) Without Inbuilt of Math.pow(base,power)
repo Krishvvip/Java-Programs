@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int n2=sc.nextInt();
+        int len=3;
+        int rem,rev=0;
+        for(int i=n;i<n2;i++){
+            int copy=i;
+            while(copy>0){
+                rem=copy%10;
+                rev=rev+(rem*rem*rem);
+                copy=copy/10;
+            }
+            if(rev==i)
+            System.out.print(i);
+            rev=0;
+        }
+    }
+}
