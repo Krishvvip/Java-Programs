@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int rem=0,fact=1,sum=0;
+		int copy=n;
+		while(copy>0){
+		    rem=copy%10;
+		    for(int i=1;i<=rem;i++){
+		        fact=fact*i;
+		    }
+		    sum=sum+fact;
+		    fact=1;
+		    copy=copy/10;
+		}
+		if(sum==n){
+		    System.out.print(sum+" It is a Strong number");
+		}else{
+		    System.out.print(sum+" It is not a Strong number");
+		}
+		
+	}
+}
