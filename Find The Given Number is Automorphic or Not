@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int rem=0,squ=1;
+		int copy=n,keep=0;
+		int len=String.valueOf(copy).length();
+		copy=copy*copy;
+		if(len==1){
+		    rem=copy%10;
+		}else if(len==2){
+		    rem=copy%100;
+		}else{
+		    rem=copy%1000;
+		}
+		if(rem==n){
+		    System.out.print(copy+" It is a Automorphic number");
+		}else{
+		    System.out.print(copy+" It is not an Automorphic number");
+		}
+		
+	}
+}
