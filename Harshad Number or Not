@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int rem=0,count=0,sum=0;
+		int copy=n;
+		while(copy>0){
+		    rem=copy%10;
+		    sum=sum+rem;
+		    copy=copy/10;
+		}
+		for(int i=1;i<=n;i++){
+		        if(sum*i==n){
+		            count++;
+		            break;
+		        }
+		    }
+		if(count==1){
+		    System.out.print(sum+" It is a Harshad number");
+		}else{
+		    System.out.print(sum+" It is not a Harshad number");
+		}
+		
+	}
+}
