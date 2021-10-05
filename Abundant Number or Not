@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int copy=n,factor=0;
+		for(int i=1;i<copy;i++){
+		    for(int j=1;j<=copy;j++){
+		        if(i*j==copy){
+		            factor=(factor+i);
+		            System.out.print(i+" ");
+		        }
+		    }
+		}
+		if(factor>copy){
+		    System.out.println(factor+" It is a Abundant number");
+		}else{
+		    System.out.println(factor+" It is not a Abundant number");
+		}
+		
+	}
+}
