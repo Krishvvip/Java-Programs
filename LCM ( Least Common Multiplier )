@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int n1=sc.nextInt();
+        int arr[]=new int[100];
+        int arr1[]=new int[100];
+        int j=0,j1=0;
+        for(int i=1;i<=100;i++) {
+            int mul=n*i;
+            arr[j] = mul;
+            j++;
+            System.out.print(mul+ " ");
+        }
+        for(int i=1;i<=100;i++){
+            int mul1=n1*i;
+            arr1[j1]=mul1;
+            j1++;
+            System.out.print(mul1+" ");
+        }
+        int stop=0;
+        for(int i=1;i<j;i++){
+            if(stop==arr[i-1]){
+                break;
+            }else{
+                for(int k=1;k<j1;k++){
+                    if(arr[i]==arr1[k]) {
+                        stop=arr[i];
+                        System.out.println();
+                        System.out.println("LCM is " + arr[i]);
+                    }
+                }
+            }
+        }
+    }
+}
