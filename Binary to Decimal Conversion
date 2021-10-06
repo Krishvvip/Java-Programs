@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a=1,rem,power,sum=0;
+        int len=String.valueOf(n).length();
+        for(int i=1;i<=len;i++){
+            rem=n%10;
+            power=rem*a;
+            sum=sum+power;
+            a=a*2;
+            n=n/10;
+        }
+        System.out.print(sum);
+        }
+}
