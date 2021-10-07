@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main
+{   static int calaculate(int rem){
+    int a=1,rem1,power,sum=0;
+    int copy=rem;
+    int len1=String.valueOf(rem).length();
+    for(int i=1;i<=len1;i++){
+        rem1=copy%10;
+        power=rem1*a;
+        sum=sum+power;
+        a=a*2;
+        copy=copy/10;
+    }
+    return sum;
+    
+}
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int b=1,ans=0,rem,result;
+        int len=String.valueOf(n).length();
+        len=len/3;
+        for(int i=0;i<=len;i++){
+            rem=n%1000;
+            result=calaculate(rem);
+            ans=ans+(result*b);
+            b=b*10;
+            n=n/1000;
+        }
+        System.out.print(ans);
+        }
+}
