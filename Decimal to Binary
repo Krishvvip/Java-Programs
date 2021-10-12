@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main
+{   
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int len=String.valueOf(n).length();
+        int dimension=len*3;
+        int i=0,j=0,rem;
+        int arr[]=new int[dimension];
+        int res[]=new int[dimension];
+        while(n>0){
+            rem=n%2;
+            arr[i]=rem;
+            i++;
+            n=n/2;
+        }i--;
+        while(i>=0){
+            rem=arr[i]%10;
+            res[j]=rem;
+            j++;
+            i--;
+        }
+        for(int k:res){
+            System.out.print(k);  
+        }
+    }
+}
