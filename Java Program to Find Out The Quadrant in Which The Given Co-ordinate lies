@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main
+{   
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int X=sc.nextInt();
+        int Y=sc.nextInt();
+        if(X>0 && Y>0){
+            System.out.print("Quadrent 1");
+        }
+        if(X>0 && Y<0){
+            System.out.print("Quadrent 2");
+        }
+        if(X<0 && Y<0){
+            System.out.print("Quadrent 3");
+        }
+        if(X<0 && Y>0){
+            System.out.print("Quadrent 4");
+        }
+        if(X==0 && Y==0){
+            System.out.print("Origin");
+        }else{
+            System.out.print("one of the number is zero");
+        }
+}
+}
